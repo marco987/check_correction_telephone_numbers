@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'TelephoneController@index')->name('home-page');
+
+Route::post('/show', 'TelephoneController@show')->name('show');
+
+Route::post('/verify_number', 'TelephoneController@verify_number')->name('verify_number');
